@@ -1,0 +1,76 @@
+package ejercicios;
+import java.util.Scanner;
+/**
+ *
+ * @author Est01
+ */
+public class CuentaBanco {
+    // Funciones:
+    public static double consultaSaldo(){
+        double saldo = 123456.8;
+        return saldo;
+        
+    }
+    private static double saldo = 12345.8;
+   
+    public static double hacerRetiros(){
+         Scanner scanner = new Scanner(System.in);
+        double valor = scanner.nextDouble();
+        scanner.nextLine();
+        
+        return valor;
+       
+                
+    }
+    public static double hacerConsignacion(){
+        Scanner scanner = new Scanner(System.in);
+        double valor = scanner.nextDouble();
+        scanner.nextLine();
+        
+        return valor;
+        
+    }
+    //Metodo Main:
+    public static void main (String[]args){
+        String usuario = " juan gil";
+        
+        while(true){
+            
+            System.out.println("hola usuario"+usuario+"\n");
+            System.out.println("que quieres hacer el dia de hoy\n");
+            System.out.println("1. consultar saldo");
+            System.out.println("2. hacer retiros");
+            System.out.println("3. hace consignaciones");
+            System.out.println("4. salir");
+            Scanner scanner = new Scanner(System.in);
+            int opcion = scanner.nextInt();
+            scanner.nextLine();
+            
+            if(opcion == 4){
+                break;
+            }
+            switch(opcion){
+                case 1:
+                    System.out.println("su saldo actual es " + saldo);
+                    consultaSaldo();
+                    break;
+                case 2: 
+                    System.out.println("Cuanto quieres retirar ");
+                    hacerRetiros();
+                    break;
+                case 3:
+                    System.out.println("haciendo consignacion...");
+                    hacerConsignacion();
+                    break;
+                case 4:
+                    System.out.println("4. salir");
+                    break;
+                default:
+                    System.out.println("opcion invalida");
+                
+            }
+        }   
+            
+    }
+        
+}
